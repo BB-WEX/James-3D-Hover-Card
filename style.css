@@ -24,24 +24,33 @@ body {
 }
 
 .main-content {
-    background-image: linear-gradient(#16c99c, #a5fecb);
-    height: 450px;
+    z-index: 1;
     width: 400px;
-    border-radius: 50px;
+    height: 450px;
+    background-color: rgb(52, 207, 117);
     transition: all .5s ease-in-out;
-    overflow: hidden;
+    border-radius: 20%;
     transform-style: preserve-3d;
-    box-shadow: inset #a5fecc1c  -5px 5px , #16c99c -10px 10px;
-    
 }
 
-
+.background {
+    z-index: 2;
+    background-image: linear-gradient(#2bfa99, #ccffe2);
+    height: 450px;
+    width: 400px;
+    position: absolute;
+    box-shadow: inset #a5fecc1c  -5px 5px , #16c99c -10px 10px;
+    border-radius: 20% 80% 20% 20% / 19% 79% 20% 20%;
+    transition: all .5s ease-in-out;
+}
 
 .card img {
     width: 50px;
     height: 50px;
     border-radius: inherit;
-    position: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
@@ -49,11 +58,11 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: linear-gradient(45deg,  #16c99c00, #16c99c00);
+    position: absolute;
+    background: linear-gradient(45deg,  #16c99c2a, #16c99c33);
     display: flex;
     justify-content: center;
     align-items: center;
-    transform-style: preserve-3d;
 }
 
 .circle {
@@ -66,7 +75,7 @@ body {
 
 .circle:nth-child(1) {
     inset: 25px;
-    transform: translate3d(0, 0, 30px);
+    transform: translate3d(0, 0, 60px);
     transition-delay: .1s;
 }
 .circle:nth-child(2) {
@@ -85,7 +94,6 @@ body {
     transition-delay: .4s;
 }
 .circle:nth-child(5) {
-    inset: 125px;
     transform: translate3d(0, 0, 150px);
     transition-delay: .5s;
 }
@@ -186,7 +194,9 @@ button {
     
 }
 
-
+.background.enlarge {
+    height: 600px;
+}
 
 .main-content.enlarge {
     height: 600px;
